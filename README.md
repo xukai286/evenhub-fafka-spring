@@ -19,4 +19,8 @@ client-ssl.properties：
     security.protocol=SASL_SSL
     sasl.mechanism=PLAIN
 
+执行脚本
+>./kafka-consumer-groups.sh --bootstrap-server kaisay1.servicebus.chinacloudapi.cn:9093 --command-config client-ssl.properties --describe --group listen2 --timeout 100000
+
+Output:
 ![screenshot](231107.png)
