@@ -1,4 +1,4 @@
-# evenhub-fafka-spring
+# Spring-Kafka 连接 Azure EventHub
 Eventhub 为standard tier，kafka client连接需要启用SASL
 # Kafka 工具类配置
 
