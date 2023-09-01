@@ -1,7 +1,8 @@
 # Spring-Kafka 连接 Azure EventHub
 Eventhub 为standard tier，kafka client连接需要启用SASL
 # Kafka 工具类配置
-* version kafka_2.13-3.4.1
+* Kafka client version kafka_2.13-3.4.1
+* Java Version ："20.0.2" 2023-07-18
 * 添加JVM参数  -Djava.security.auth.login.config=kafka_client_jaas.conf
 * Kafka的官方文档没有说明格式实际测试应该为
 
