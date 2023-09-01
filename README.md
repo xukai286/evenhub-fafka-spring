@@ -5,6 +5,17 @@ Eventhub 为standard tier，kafka client连接需要启用SASL
 * 添加JVM参数  -Djava.security.auth.login.config=kafka_client_jaas.conf
 * Kafka的官方文档没有说明格式实际测试应该为
 
+在kafka client bin 路径下创建两个空文件 
+* kafka_client_jaas.conf
+* client-ssl.properties
+
+修改client启动脚本kafka-run-class.sh，加入参数java.security.auth.login.config=kafka_client_jaas.conf，比如再Memory Option中加入，或者其他任何地方加入到环境变量或者JVM启动参数中
+
+    # Memory options
+    if [ -z "$KAFKA_HEAP_OPTS" ]; then
+        KAFKA_HEAP_OPTS="-Xmx256M -Djava.security.auth.login.config=kafka_client_jaas.conf"
+    fi
+
 kafka_client_jaas.conf：
 
     KafkaClient {
