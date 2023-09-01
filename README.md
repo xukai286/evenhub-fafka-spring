@@ -4,7 +4,14 @@ Eventhub 为standard tier，kafka client连接需要启用SASL
 * Kafka client version kafka_2.13-3.4.1
 * Java Version ："20.0.2" 2023-07-18
 * 添加JVM参数  -Djava.security.auth.login.config=kafka_client_jaas.conf
-* Kafka的官方文档没有说明格式实际测试应该为
+* Kafka的官方文档没有说明jaas auth 格式需要包含特别的格式，如下
+
+需要指定Block 内包含描述内容
+
+    KafkaClient {
+        ...
+    };
+
 
 在kafka client bin 路径下创建两个空文件 
 * kafka_client_jaas.conf
